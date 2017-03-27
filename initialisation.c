@@ -47,6 +47,15 @@ void insertion(Liste *li, int nvNombre)
 	li->premier=nouveau;
 }
 
+void suppression(Liste *liste)
+{
+	if(liste->premier!=NULL)
+	{
+		Element *asupprimer=liste->premier;
+		liste->premier=liste->premier->suivant;
+		free(asupprimer);
+	}
+}
 
 int main()
 {
