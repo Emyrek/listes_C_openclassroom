@@ -35,6 +35,19 @@ Liste *init()
 	return li;
 }
 
+void insertion(Liste *li, int nvNombre)
+{
+	Element *nouveau=malloc(sizeof(*nouveau));
+	if(nouveau==NULL)
+	{
+		exit(-1);
+	}
+	nouveau->nombre=nvNombre;
+	nouveau->suivant=li->premier;
+	li->premier=nouveau;
+}
+
+
 int main()
 {
 	return 0;
